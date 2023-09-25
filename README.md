@@ -18,6 +18,6 @@ It is not recommended to use compressed CSS code or inline styles in HTML.
 - 本插件参考[css-flexbox-cheatsheet](https://github.com/dzhavat/css-flexbox-cheatsheet) 进行改造
 - 由[小秋AI](https://chat.xqai.net/)提供辅助支持（赞美AI）
 - This plugin is modified based on [css-flexbox-cheatsheet](https://github.com/dzhavat/css-flexbox-cheatsheet)
-- [小秋AI](https://chat.xqai.net/) provides auxiliary support. (Praising AI)
+- [XiaoQiu AI](https://chat.xqai.net/) provides auxiliary support. (Praising AI)
 > 欢迎反馈交流，求Star~  
 > Welcome to provide feedback and communicate, please give it a star~ 
