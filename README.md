@@ -1,27 +1,20 @@
-# Hello World Sample
+# CSS Flex
+快速生成CSS Flex布局代码的VS Code插件（类似于Google开发者工具的Flex布局插件）
 
-This is a Hello World example that shows you how to use VS Code API.
+- 支持多类型的css文件
+- 兼容深色与浅色主题
+- 自动替换同属性代码
+  
+## 💻示例
 
-Guide for this sample: https://code.visualstudio.com/api/get-started/your-first-extension.
+![CSS Flex示例](/images/readme/demo.gif)
 
-## Demo
+## ⚠️注意事项
+不建议在压缩后的CSS代码或HTML的行内样式中使用
 
-![demo](demo.gif)
 
-## VS Code API
+### 😉致谢
+- 本插件参考[css-flexbox-cheatsheet](https://github.com/dzhavat/css-flexbox-cheatsheet) 进行改造
+- 由我独立开发的[小秋AI](https://chat.xqai.net/)提供辅助支持（赞美AI）
 
-### `vscode` module
-
-- [`commands.registerCommand`](https://code.visualstudio.com/api/references/vscode-api#commands.registerCommand)
-- [`window.showInformationMessage`](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage)
-
-### Contribution Points
-
-- [`contributes.commands`](https://code.visualstudio.com/api/references/contribution-points#contributes.commands)
-
-## Running the Sample
-
-- Run `npm install` in terminal to install dependencies
-- Run the `Run Extension` target in the Debug View. This will:
-	- Start a task `npm: watch` to compile the code
-	- Run the extension in a new VS Code window
+> 欢迎反馈交流，求Star~
