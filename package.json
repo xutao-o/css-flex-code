@@ -1,0 +1,45 @@
+{
+	"name": "css_flex",
+	"displayName": "CSS Flex",
+	"description": "Quick Generation of CSS Flex Layout Code (Similar to Google Developer Tools' Flex Layout Plugin)",
+	"version": "0.0.1",
+	"publisher": "丘秋_XT",
+	"repository": "https://github.com/Microsoft/vscode-extension-samples/helloworld-sample",
+	"engines": {
+		"vscode": "^1.75.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+        "onLanguage:css",
+        "onLanguage:less",
+        "onLanguage:sass",
+        "onLanguage:scss",
+        "onLanguage:vue",
+        "onLanguage:html"
+    ],
+	"main": "./out/extension.js",
+	"contributes": {
+        "languages": [
+            {
+                "id": "vue",
+                "extensions": [".vue"]
+            },
+            {
+                "id": "scss",
+                "extensions": [".scss"]
+            }
+        ]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^16.18.34",
+		"@types/vscode": "^1.73.0",
+		"typescript": "^5.2.2"
+	}
+}
