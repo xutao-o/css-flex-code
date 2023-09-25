@@ -11,13 +11,11 @@ Quickly generate CSS Flex layout code in VS Code (similar to Google Developer To
 ![CSS Flex示例](/images/readme/demo.gif)
 
 ### ⚠️注意事项（Warning ）
-不建议在压缩后的CSS代码或HTML的行内样式中使用  
-It is not recommended to use compressed CSS code or inline styles in HTML.
+不建议在压缩后的CSS代码或HTML的行内样式中使用插件   
+This plugin is not recommended for use with compressed CSS code or inline styles in HTML.
 
 ### 😉致谢（Thank）
-- 本插件参考[css-flexbox-cheatsheet](https://github.com/dzhavat/css-flexbox-cheatsheet) 进行改造
-- 由[小秋AI](https://chat.xqai.net/)提供辅助支持（赞美AI）
-- This plugin is modified based on [css-flexbox-cheatsheet](https://github.com/dzhavat/css-flexbox-cheatsheet)
-- [XiaoQiu AI](https://chat.xqai.net/) provides auxiliary support. (Praising AI)
+- 本插件参考[css-flexbox-cheatsheet](https://github.com/dzhavat/css-flexbox-cheatsheet) 进行改造（This plugin is modified based on [css-flexbox-cheatsheet](https://github.com/dzhavat/css-flexbox-cheatsheet)）
+- 由[小秋AI](https://chat.xqai.net/)提供辅助支持，赞美AI！（ [XiaoQiu AI](https://chat.xqai.net/) provides auxiliary support. Praising AI!）
 > 欢迎反馈交流，求Star~  
 > Welcome to provide feedback and communicate, please give it a star~ 
