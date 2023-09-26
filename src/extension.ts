@@ -179,9 +179,7 @@ function decorate(editor: vscode.TextEditor) {
                         new vscode.Position(line, match.index),
                         new vscode.Position(line, flexIndex)
                     );
-
                     let decoration = { range };
-
                     decorationsArray.push(decoration);
                 }
             });

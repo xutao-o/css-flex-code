@@ -1,15 +1,16 @@
 {
-	"name": "css_flex",
-	"displayName": "CSS Flex",
-	"description": "快速在VS Code中生成CSS Flex布局代码的插件（类似于Google开发者工具的Flex布局插件） | Quickly generate CSS Flex layout code in VS Code (similar to Google Developer Tools' Flex layout plugin)",
-	"version": "0.0.1",
-	"publisher": "丘秋_XT",
+	"name": "css-flex",
+	"displayName": "CSS FlexCode",
+	"description": "生成CSS Flex布局代码的插件（类似于Google开发者控制台里的Flex布局工具） | A plugin to generate CSS Flex layout code (Similar to the Flexbox inspector tool in Google Developer Console)",
+	"version": "1.0.1",
+	"publisher": "qiuqiu-xt",
 	"repository": "https://github.com/xutao-o/css_flex",
+    "icon": "images/logo.png",
 	"engines": {
 		"vscode": "^1.75.0"
 	},
 	"categories": [
-		"Other"
+		"Snippets"
 	],
 	"activationEvents": [
         "onLanguage:css",
@@ -22,14 +23,6 @@
 	"main": "./out/extension.js",
 	"contributes": {
         "languages": [
-            {
-                "id": "vue",
-                "extensions": [".vue"]
-            },
-            {
-                "id": "scss",
-                "extensions": [".scss"]
-            }
         ]
 	},
 	"scripts": {
