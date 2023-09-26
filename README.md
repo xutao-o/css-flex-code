@@ -1,4 +1,8 @@
 # CSS FlexCode
+
+> 欢迎反馈交流，[点个Star~](https://github.com/xutao-o/css-flex-code)   
+> Welcome to provide feedback and communicate, [please give it a star~](https://github.com/xutao-o/css-flex-code)
+
 快捷生成CSS Flex布局代码的VS Code插件（类似于Google开发者控制台里的Flex布局工具）  
 A plugin to generate CSS Flex layout code  (Similar to the Flexbox inspector tool in Google Developer Console)
 
@@ -18,7 +22,5 @@ This plugin is not recommended for use with compressed CSS code or inline styles
 ### 😉致谢（Thank）
 - 本插件参考于[css-flexbox-cheatsheet](https://github.com/dzhavat/css-flexbox-cheatsheet) （This plugin is modified based on [css-flexbox-cheatsheet](https://github.com/dzhavat/css-flexbox-cheatsheet)）
 - 由[小秋AI](https://chat.xqai.net/)提供辅助支持，赞美AI！（ [XiaoQiu AI](https://chat.xqai.net/) provides auxiliary support. Praising AI!）  
-- 私货：[小秋标签页](https://www.xqss.link/website)，独立开发的聚合搜索标签页。
+- 私货：[小秋标签页](https://www.xqss.link/website)，独立开发的聚合搜索标签页。  
 
-> 欢迎反馈交流，[点个Star~](https://github.com/xutao-o/css-flex-code)   
-> Welcome to provide feedback and communicate, [please give it a star~](https://github.com/xutao-o/css-flex-code)
