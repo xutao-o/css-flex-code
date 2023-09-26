@@ -15,7 +15,7 @@ A plugin to generate CSS Flex layout code  (Similar to the Flexbox inspector too
 This plugin is not recommended for use with compressed CSS code or inline styles in HTML.
 
 ### 😉致谢（Thank）
-- 本插件参考[css-flexbox-cheatsheet](https://github.com/dzhavat/css-flexbox-cheatsheet) 进行改造（This plugin is modified based on [css-flexbox-cheatsheet](https://github.com/dzhavat/css-flexbox-cheatsheet)）
+- 本插件参考于[css-flexbox-cheatsheet](https://github.com/dzhavat/css-flexbox-cheatsheet) （This plugin is modified based on [css-flexbox-cheatsheet](https://github.com/dzhavat/css-flexbox-cheatsheet)）
 - 由[小秋AI](https://chat.xqai.net/)提供辅助支持，赞美AI！（ [XiaoQiu AI](https://chat.xqai.net/) provides auxiliary support. Praising AI!）  
 - 私货：[小秋标签页](https://www.xqss.link/website)，独立开发的聚合搜索标签页。
 
