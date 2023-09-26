@@ -19,5 +19,5 @@ This plugin is not recommended for use with compressed CSS code or inline styles
 - 由[小秋AI](https://chat.xqai.net/)提供辅助支持，赞美AI！（ [XiaoQiu AI](https://chat.xqai.net/) provides auxiliary support. Praising AI!）  
 - 私货：[小秋标签页](https://www.xqss.link/website)，独立开发的聚合搜索标签页。
 
-> 欢迎反馈交流，点个Star~  
-> Welcome to provide feedback and communicate, please give it a star~ 
+> 欢迎反馈交流，[点个Star~](https://github.com/xutao-o/css_flex)
+> Welcome to provide feedback and communicate, [please give it a star~](https://github.com/xutao-o/css_flex)
