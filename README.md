@@ -13,7 +13,7 @@ A plugin to generate CSS Flex layout code  (Similar to the Flexbox inspector too
   
 ## 💻示例（Demo）
 
-![CSS Flex示例](https://raw.githubusercontent.com/xutao-o/css-flex-code/main/images/readme/demo.gif)
+![CSS Flex示例](https://resource.helplook.net/docker_production/kn8ndd/article/4FZxPK/6513a49632d93.gif)
 
 ### ⚠️注意事项（Warning ）
 不建议在压缩后的CSS代码或HTML的行内样式中使用插件   
