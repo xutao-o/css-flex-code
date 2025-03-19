@@ -1,8 +1,8 @@
 {
 	"name": "css-flex",
-	"displayName": "CSS FlexCode",
-	"description": "生成CSS Flex布局代码的插件（类似于Google开发者控制台里的Flex布局工具） | A plugin to generate CSS Flex layout code (Similar to the Flexbox inspector tool in Google Developer Console)",
-	"version": "1.0.2",
+	"displayName": "CSS FlexCode(Grid)",
+	"description": "一键生成Flex布局/Grid布局的CSS代码插件（类似于Google开发者控制台里的Flex布局工具） | A plugin to generate CSS Flex layout code (Similar to the Flexbox inspector tool in Google Developer Console)",
+	"version": "1.1.1",
 	"publisher": "qiuqiu-xt",
 	"repository": "https://github.com/xutao-o/css-flex-code",
     "icon": "images/logo.png",
@@ -18,7 +18,13 @@
         "onLanguage:sass",
         "onLanguage:scss",
         "onLanguage:vue",
-        "onLanguage:html"
+        "onLanguage:html",
+        "onLanguage:jsx",
+        "onLanguage:tsx",
+        "onLanguage:svelte",
+        "onLanguage:astro",
+        "onLanguage:styl",
+        "onLanguage:htm"
     ],
 	"main": "./out/extension.js",
 	"contributes": {

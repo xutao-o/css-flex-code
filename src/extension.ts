@@ -167,12 +167,15 @@ function decorate(editor: vscode.TextEditor) {
     for (let line = 0; line < sourceCodeArr.length; line++) {
         const sourceCode = sourceCodeArr[line];
 
-        let matches = matchAll(flexboxPatterns.displayFlexPattern, sourceCode);
-        if (matches.length == 0) {
-            matches = matchAll(flexboxPatterns.displayInlineFlexPattern, sourceCode);
+        let matches = [] as any;
+        for (const pattern of flexboxPatterns.allFlexboxPatterns) {
+            matches = matchAll(pattern, sourceCode);
+            if (matches.length > 0) {
+                break;
+            }
         }
         if (matches.length > 0) {
-            matches.forEach((match) => {
+            matches.forEach((match:any) => {
                 if (match.index !== undefined) {
                     const flexIndex = sourceCode.indexOf(';', match.index) + 1;
                     let range = new vscode.Range(
@@ -210,6 +213,9 @@ function buildMarkdownString(
     let imgUrl = isDarkTheme() ? 'light_flex' : 'dark_flex'
     const editor = vscode.window.activeTextEditor as any;
     let direction = "row"
+
+    let LineText = editor.document.lineAt(posLine).text
+    let flexBol = LineText.includes('flex')
     // 遍历字符
     for (let i = posLine - 1; i >= 0; i--) {
         const line = editor.document.lineAt(i);
@@ -263,7 +269,8 @@ function buildMarkdownString(
             return alignmentMap[key][direction];
         }
     };
-    let HoverHtml = `<span style="color:#3794FF;">flex-direction</span>
+
+    const flex_html = `<span style="color:#3794FF;">flex-direction</span>
     <div>
         <a  href="${getCommandUri("flex-direction","row", posLine)}">
             <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `icon_flex_direction_row.svg`))}"> 
@@ -346,8 +353,81 @@ function buildMarkdownString(
         <a href="${getCommandUri("align-items","baseline", posLine)}">
             <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `items_baseline.svg`))}"> 
         </a>
+    </div>`
+
+    const grid_html = `<span style="color:#3794FF;">align-content</span>
+    <div>
+        <a href="${getCommandUri("align-content","center", posLine)}">
+            <img  width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `content_center${svgType}.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("align-content","space-between", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `content_space-between${svgType}.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("align-content","space-around", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `content_space-around${svgType}.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("align-content","space-evenly", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `content_space-evenly${svgType}.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("align-content","stretch", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `content_stretch${svgType}.svg`))}"> 
+        </a>
     </div>
-    `
+    <span style="color:#3794FF;">justify-content</span>
+    <div>
+        <a href="${getCommandUri("justify-content","center", posLine)}">
+            <img  width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `content_center${svgType ? '' : '_column'}.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("justify-content","flex-start", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `${getSvg('flex-start')}`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("justify-content","flex-end", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `${getSvg('flex-end')}`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("justify-content","space-between", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `content_space-between${svgType ? '' : '_column'}.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("justify-content","space-around", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `content_space-around${svgType ? '' : '_column'}.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("justify-content","space-evenly", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `content_space-evenly${svgType ? '' : '_column'}.svg`))}"> 
+        </a>
+    </div>
+    <span style="color:#3794FF;">align-items</span>
+    <div>
+        <a href="${getCommandUri("align-items","center", posLine)}">
+            <img  width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `items_center${svgType}.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("align-items","flex-start", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `items_flex-start${svgType}.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("align-items","flex-end", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `items_flex-end${svgType}.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("align-items","stretch", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `items_stretch${svgType}.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("align-items","baseline", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `items_baseline.svg`))}"> 
+        </a>
+    </div><span style="color:#3794FF;">justify-items</span>
+    <div>
+        <a href="${getCommandUri("justify-items","center", posLine)}">
+            <img  width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `justify-items-center.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("justify-items","start", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `justify-items-start.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("justify-items","end", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `justify-items-end.svg`))}"> 
+        </a>&nbsp;
+        <a href="${getCommandUri("justify-items","stretch", posLine)}">
+            <img width="22px" src="${vscode.Uri.file(join(context.extensionPath, `images/${imgUrl}`, `justify-items-stretch.svg`))}"> 
+        </a>&nbsp;
+    </div>`
+
+    let HoverHtml = flexBol ? flex_html : grid_html
     flexboxCommand.appendMarkdown(HoverHtml)
     flexboxCommand.isTrusted = true
     flexboxCommand.supportHtml = true
