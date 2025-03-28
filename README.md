@@ -2,6 +2,9 @@
 > 欢迎反馈交流，[点个Star~](https://github.com/xutao-o/css-flex-code)   
 > Welcome to provide feedback and communicate, [please give it a star~](https://github.com/xutao-o/css-flex-code)
 
+VS Code市场安装地址：[https://marketplace.visualstudio.com/items?itemName=qiuqiu-xt.css-flex](https://marketplace.visualstudio.com/items?itemName=qiuqiu-xt.css-flex)
+VS Code market installation address: [https://marketplace.visualstudio.com/items?itemName=qiuqiu-xt.css-flex](https://marketplace.visualstudio.com/items?itemName=qiuqiu-xt.css-flex)
+
 快捷生成CSS Flex布局与Grid布局代码的VS Code插件（类似于Google开发者控制台里的Flex布局工具）  
 A VS Code extension that quickly generates CSS Flex and Grid layout code.
 
