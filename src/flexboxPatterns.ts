@@ -1,22 +1,27 @@
 /**
- * Matches `display: flex` property
+ * 匹配 CSS 和 Stylus 的 display: flex;
+ * 支持 display flex, display: flex, display flex;
+ * 不区分冒号和分号
  */
-export const displayFlexPattern = /display:\s*flex;/g;
+export const displayFlexPattern = /\bdisplay\s*:?\s*flex\s*;?/g;
 
 /**
- * Matches `display: inline-flex` property
+ * 匹配 CSS 和 Stylus 的 display: inline-flex;
+ * 支持 display inline-flex
  */
-export const displayInlineFlexPattern = /display:\s*inline-flex;/g;
+export const displayInlineFlexPattern = /\bdisplay\s*:?\s*inline-flex\s*;?/g;
 
 /**
- * Matches `display: grid` property
+ * 匹配 CSS 和 Stylus 的 display: grid;
+ * 支持 display grid
  */
-export const displayGridPattern = /display:\s*grid;/g;
+export const displayGridPattern = /\bdisplay\s*:?\s*grid\s*;?/g;
 
 /**
- * Matches `display: inline-grid` property
+ * 匹配 CSS 和 Stylus 的 display: inline-grid;
+ * 支持 display inline-grid
  */
-export const displayInlineGridPattern = /display:\s*inline-grid;/g;
+export const displayInlineGridPattern = /\bdisplay\s*:?\s*inline-grid\s*;?/g;
 
 export const allFlexboxPatterns = [
   displayFlexPattern,

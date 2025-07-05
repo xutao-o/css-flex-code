@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import { join } from 'path';
 import * as flexboxPatterns from './flexboxPatterns';
 
-const supportedFiles = ['css', 'less', 'sass', 'scss', 'vue', 'html'];
+const supportedFiles = ['css', 'less', 'sass', 'scss', 'vue', 'html', 'styl', 'stylus'];
 let decorationType: vscode.TextEditorDecorationType;
 
 export function activate(context: vscode.ExtensionContext) {
